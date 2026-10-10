@@ -1,318 +1,224 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viji Web | Website Design Portfolio</title>
-<meta name="description" content="Professional, modern and responsive websites for clinics, boutiques and businesses.">
+<title>Viji Web | Professional Website Design Portfolio</title>
+<meta name="description" content="Modern, premium and responsive websites for businesses, clinics and boutiques.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy:#10213d;
-  --blue:#2563eb;
-  --light:#f4f7fc;
-  --text:#243247;
-  --muted:#66758b;
+:root{--navy:#10213d;--blue:#2563eb;--light:#f4f7fc;--text:#243247;--muted:#66758b;--gold:#c9a96e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',Arial,sans-serif;color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid #e5eaf2}
+nav{max-width:1180px;margin:auto;padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-family:Manrope,sans-serif;font-size:23px;font-weight:800;color:var(--navy);white-space:nowrap}
+.logo span{color:var(--blue)}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--blue)}
+.nav-cta{background:var(--navy);color:white!important;padding:11px 17px;border-radius:7px}
+.hero{min-height:620px;display:flex;align-items:center;padding:85px 24px;color:white;background:radial-gradient(ellipse at 80% 20%,#2869b5 0%,transparent 42%),linear-gradient(125deg,#0a1930,#123e78 65%,#1769aa)}
+.hero-inner{width:100%;max-width:1120px;margin:auto}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#91c9ff}
+h1{font-family:Manrope,sans-serif;font-size:clamp(40px,6vw,72px);line-height:1.1;letter-spacing:-1.8px;max-width:850px;margin:23px 0}
+.hero p{max-width:650px;color:#e2edfc;font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{display:inline-block;padding:14px 22px;border-radius:7px;font-size:13px;font-weight:800;transition:.2s}
+.btn-primary{background:white;color:var(--navy)}
+.btn-outline{border:1px solid #9ecbff;color:white}
+.btn:hover{transform:translateY(-2px)}
+.hero-note{margin-top:30px;color:#d0e3fb;font-size:12px;letter-spacing:.3px}
+section{padding:82px 24px}
+.container{max-width:1120px;margin:auto}
+.section-label{font-size:11px;font-weight:800;letter-spacing:2.5px;color:var(--blue);text-transform:uppercase}
+h2{font-family:Manrope,sans-serif;color:var(--navy);font-size:clamp(30px,4vw,44px);line-height:1.2;margin:12px 0 17px;letter-spacing:-.7px}
+.intro{max-width:700px;color:var(--muted);font-size:15px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about-panel{padding:32px;border:1px solid #e1e9f3;border-radius:15px;background:linear-gradient(145deg,#f7faff,#edf4fc)}
+.about-panel h3{font-family:Manrope,sans-serif;color:var(--navy);font-size:20px;margin-bottom:12px}
+.about-panel p{font-size:14px;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.skills span{background:white;border:1px solid #dce6f2;padding:7px 11px;border-radius:5px;font-size:12px;font-weight:700}
+.projects{background:#f4f7fc}
+.projects-head{display:flex;justify-content:space-between;align-items:end;gap:25px;flex-wrap:wrap}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:35px}
+.project{background:white;border:1px solid #e1e8f2;border-radius:15px;overflow:hidden;box-shadow:0 15px 40px rgba(16,33,61,.08);transition:transform .25s,box-shadow .25s}
+.project:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(16,33,61,.13)}
+.project-banner{height:310px;position:relative;overflow:hidden;background:#10213d}
+.carepoint-banner img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.carepoint-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,19,39,.9),rgba(5,19,39,.05) 80%)}
+.banner-copy{position:absolute;z-index:1;left:28px;right:24px;bottom:26px;color:white}
+.banner-copy .small-label{font-size:10px;letter-spacing:2px;font-weight:800;color:#c8e4ff;text-transform:uppercase}
+.banner-copy h3{font-family:Manrope,sans-serif;font-size:32px;line-height:1.2;margin-top:6px}
+.banner-copy p{font-size:13px;color:#e5effc;margin-top:6px}
+.future-banner{height:310px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;background:radial-gradient(ellipse at 80% 20%,#20a681,transparent 45%),linear-gradient(135deg,#073d38,#087e70);color:white}
+.future-banner .small-label{font-size:10px;letter-spacing:2px;color:#c6fff0;font-weight:800}
+.future-banner h3{font-family:Manrope,sans-serif;font-size:30px;line-height:1.2;margin-top:8px}
+.future-banner p{font-size:13px;color:#d7fff3;margin-top:8px}
+.project-body{padding:27px}
+.tag{display:inline-block;background:#edf5ff;color:#1d4ed8;padding:5px 9px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.6px}
+.project-body h3{font-family:Manrope,sans-serif;color:var(--navy);font-size:21px;margin-top:14px}
+.project-body p{color:var(--muted);font-size:13px;margin:10px 0 17px}
+.project-link{display:inline-block;color:var(--blue);font-size:13px;font-weight:800}
+.project-link:hover{text-decoration:underline}
+.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:32px}
+.service{padding:26px;border:1px solid #e4eaf3;border-radius:12px;background:white;transition:.2s}
+.service:hover{border-color:#9bbdf1;transform:translateY(-3px)}
+.service-icon{font-size:25px;margin-bottom:13px}
+.service h3{font-family:Manrope,sans-serif;color:var(--navy);font-size:17px;margin-bottom:7px}
+.service p{color:var(--muted);font-size:13px}
+.contact{background:linear-gradient(125deg,#0a1930,#17477f);color:white;text-align:center}
+.contact .section-label{color:#9bcfff}
+.contact h2{color:white}
+.contact p{color:#d8e6f8;max-width:620px;margin:auto;font-size:14px}
+.contact .btn{margin-top:25px;background:white;color:var(--navy)}
+footer{padding:25px 20px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid #e5eaf2}
+@media(max-width:760px){
+ nav{align-items:flex-start;flex-direction:column;padding:14px 20px}
+ .navlinks{gap:14px;flex-wrap:wrap}
+ .nav-cta{padding:8px 11px}
+ .hero{min-height:550px;padding:70px 22px}
+ .hero p{font-size:15px}
+ section{padding:60px 20px}
+ .about-grid,.project-grid{grid-template-columns:1fr;gap:22px}
+ .services-grid{grid-template-columns:1fr 1fr}
+ .project-banner,.future-banner{height:280px}
 }
-* { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; }
-body {
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  line-height:1.7;
-}
-a { color:inherit; text-decoration:none; }
-header {
-  position:sticky; top:0; z-index:10;
-  background:#fff; border-bottom:1px solid #e5eaf2;
-}
-nav {
-  max-width:1150px; margin:auto; padding:16px 24px;
-  display:flex; justify-content:space-between; align-items:center;
-  gap:20px;
-}
-.logo { font-size:23px; font-weight:800; color:var(--navy); }
-.logo span { color:var(--blue); }
-.navlinks { display:flex; gap:24px; font-size:14px; }
-.navlinks a:hover { color:var(--blue); }
-
-.hero {
-  min-height:580px;
-  display:flex; align-items:center;
-  padding:80px 24px;
-  color:#fff;
-  background:linear-gradient(120deg,#10213d,#174ea6);
-}
-.hero-inner { max-width:1100px; width:100%; margin:auto; }
-.eyebrow {
-  color:#bfdbfe; font-size:12px; font-weight:bold;
-  letter-spacing:3px; text-transform:uppercase;
-}
-h1 {
-  font-size:clamp(38px,6vw,68px);
-  line-height:1.12; max-width:850px; margin:22px 0;
-}
-.hero p { max-width:660px; color:#e5edff; font-size:17px; }
-.actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
-.btn {
-  display:inline-block; padding:13px 22px; border-radius:8px;
-  font-size:14px; font-weight:bold;
-}
-.primary { background:#fff; color:var(--navy); }
-.secondary { border:1px solid #c2d7ff; color:#fff; }
-
-section { padding:78px 24px; }
-.container { max-width:1100px; margin:auto; }
-.section-label {
-  color:var(--blue); font-size:12px; letter-spacing:2px;
-  font-weight:800; text-transform:uppercase;
-}
-h2 {
-  color:var(--navy); font-size:clamp(30px,4vw,43px);
-  line-height:1.2; margin:12px 0 16px;
-}
-.intro { color:var(--muted); max-width:700px; }
-
-.about-grid {
-  display:grid; grid-template-columns:1.1fr .9fr;
-  gap:38px; align-items:center;
-}
-.about-panel {
-  padding:30px; border-radius:16px;
-  background:var(--light); border:1px solid #e3eaf4;
-}
-.about-panel h3 { color:var(--navy); margin-bottom:12px; }
-.skills { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
-.skills span {
-  background:#fff; border:1px solid #dbe5f2;
-  padding:6px 11px; border-radius:20px; font-size:13px;
-}
-
-.projects { background:var(--light); }
-.project-grid {
-  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:26px; margin-top:34px;
-}
-.project {
-  background:#fff; border:1px solid #e0e8f2;
-  border-radius:18px; overflow:hidden;
-  box-shadow:0 12px 35px rgba(16,33,61,.09);
-}
-.project-banner {
-  min-height:300px; padding:28px;
-  display:flex; flex-direction:column; justify-content:flex-end;
-  color:#fff;
-  background:linear-gradient(135deg,#10213d,#2877d4);
-  position:relative;
-}
-.carepoint-banner {
-  background-image:
-    linear-gradient(to top,rgba(7,22,43,.88),rgba(7,22,43,.05)),
-    url("./CarePoint%20Clinic%20Team%20in%20a%20Bright%20Lobby.png");
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-}
-.project-banner h3 {
-  font-size:30px; line-height:1.2;
-  text-shadow:0 2px 12px rgba(0,0,0,.3);
-}
-.project-banner p { color:#eaf2ff; margin-top:8px; font-size:14px; }
-.project-body { padding:26px; }
-.tag {
-  display:inline-block; color:#1d4ed8; background:#eff6ff;
-  border-radius:5px; padding:4px 9px; font-size:11px;
-  font-weight:bold; margin-bottom:12px;
-}
-.project-body h3 { color:var(--navy); font-size:22px; }
-.project-body p { color:var(--muted); margin:11px 0 18px; font-size:14px; }
-.project-link { color:var(--blue); font-weight:bold; font-size:14px; }
-.project-link:hover { text-decoration:underline; }
-
-.services-grid {
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px; margin-top:30px;
-}
-.service {
-  padding:25px; border:1px solid #e5ebf5; border-radius:13px;
-  background:#fff;
-}
-.service h3 { color:var(--navy); font-size:17px; margin-bottom:8px; }
-.service p { color:var(--muted); font-size:14px; }
-
-.contact { background:var(--navy); color:#fff; text-align:center; }
-.contact h2 { color:#fff; }
-.contact p { color:#d7e3f5; max-width:650px; margin:auto; }
-.contact .btn { background:#fff; color:var(--navy); margin-top:25px; }
-
-footer {
-  padding:24px; text-align:center; color:var(--muted);
-  font-size:13px; border-top:1px solid #e7edf5;
-}
-
-@media(max-width:700px) {
-  .navlinks { gap:12px; font-size:12px; flex-wrap:wrap; }
-  .logo { font-size:19px; }
-  .hero { min-height:500px; padding:70px 22px; }
-  .about-grid,.project-grid { grid-template-columns:1fr; }
-  .services-grid { grid-template-columns:1fr; }
-  .project-banner { min-height:260px; }
-  section { padding:58px 20px; }
-}
-@media(max-width:420px) {
-  nav { align-items:flex-start; flex-direction:column; }
+@media(max-width:480px){
+ .navlinks{gap:12px;font-size:12px}
+ .nav-cta{width:100%;text-align:center}
+ .services-grid{grid-template-columns:1fr}
+ .project-banner,.future-banner{height:245px}
+ .banner-copy h3,.future-banner h3{font-size:27px}
+ .project-body{padding:22px}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <nav>
-    <a class="logo" href="#home">VIJI<span>.</span>WEB</a>
-    <div class="navlinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<nav>
+<a class="logo" href="#home">VIJI<span>.</span>WEB</a>
+<div class="navlinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#services">Services</a>
+<a href="#contact" class="nav-cta">Contact Me ↗</a>
+</div>
+</nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="eyebrow">Website Design Portfolio</div>
-    <h1>Beautiful Websites That Help Businesses Grow.</h1>
-    <p>
-      I create modern, professional and mobile-friendly websites
-      that help businesses build trust, showcase their services
-      and establish a strong online presence.
-    </p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">Explore My Projects ↗</a>
-      <a class="btn secondary" href="#contact">Discuss a Website</a>
-    </div>
-  </div>
+<div class="hero-inner">
+<div class="eyebrow">Independent Website Designer</div>
+<h1>Digital Experiences<br>Designed to Make<br>Businesses Stand Out.</h1>
+<p>I create polished, responsive websites that help businesses communicate clearly, build trust and make a memorable first impression.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#projects">Explore Selected Work ↗</a>
+<a class="btn btn-outline" href="#contact">Discuss Your Project</a>
+</div>
+<div class="hero-note">STRATEGY · DESIGN · RESPONSIVE DEVELOPMENT</div>
+</div>
 </section>
 
 <section id="about">
-  <div class="container about-grid">
-    <div>
-      <div class="section-label">About Me</div>
-      <h2>Thoughtful Design.<br>Powerful First Impressions.</h2>
-      <p class="intro">
-        I design clear, attractive and responsive websites for businesses.
-        My portfolio includes demonstration projects created to show how
-        a professional website can present a brand and its services.
-      </p>
-    </div>
-    <div class="about-panel">
-      <h3>My Design Approach</h3>
-      <p>
-        Every website should look professional, work smoothly on mobile
-        devices and make it easy for visitors to understand the business.
-      </p>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Responsive Design</span>
-        <span>Business Websites</span>
-      </div>
-    </div>
-  </div>
+<div class="container about-grid">
+<div>
+<div class="section-label">About My Work</div>
+<h2>Clean Design.<br>Clear Purpose.</h2>
+<p class="intro">I create professional website concepts with clear navigation, thoughtful layouts and responsive experiences. The projects shown here demonstrate website design ideas for different business needs.</p>
+</div>
+<div class="about-panel">
+<h3>Design That Works for Your Business</h3>
+<p>Every website should help visitors understand your services, trust your brand and know what to do next.</p>
+<div class="skills">
+<span>HTML &amp; CSS</span><span>Responsive Design</span><span>Business Websites</span><span>Landing Pages</span><span>Portfolio Websites</span>
+</div>
+</div>
+</div>
 </section>
 
 <section class="projects" id="projects">
-  <div class="container">
-    <div class="section-label">Selected Work</div>
-    <h2>Featured Website Projects</h2>
-    <p class="intro">
-      Explore my website concepts designed for different business needs.
-    </p>
+<div class="container">
+<div class="projects-head">
+<div>
+<div class="section-label">Selected Work</div>
+<h2>Projects &amp; Concepts</h2>
+<p class="intro">A closer look at my website design work.</p>
+</div>
+</div>
 
-    <div class="project-grid">
-      <article class="project">
-        <div class="project-banner carepoint-banner">
-          <h3>CarePoint Clinic</h3>
-          <p>Modern Multispeciality Healthcare Website</p>
-        </div>
-        <div class="project-body">
-          <span class="tag">HEALTHCARE WEBSITE</span>
-          <h3>CarePoint Multispeciality Clinic</h3>
-          <p>
-            A healthcare website concept featuring clinic services,
-            sample doctor profiles, clinic information and an
-            appointment enquiry interface.
-          </p>
-          <p><strong>Built with:</strong> HTML, CSS and JavaScript</p>
-          <a class="project-link"
-             href="https://care-point-clinic-demo.pages.dev/"
-             target="_blank" rel="noopener noreferrer">
-             View Live Website ↗
-          </a>
-        </div>
-      </article>
+<div class="project-grid">
+<article class="project">
+<div class="project-banner carepoint-banner">
+<img src="./CarePoint%20Clinic%20Team%20in%20a%20Bright%20Lobby.png" alt="CarePoint clinic team in a bright modern lobby" loading="eager">
+<div class="banner-copy">
+<div class="small-label">Healthcare Website Concept</div>
+<h3>CarePoint Clinic</h3>
+<p>Multispeciality Clinic Website</p>
+</div>
+</div>
+<div class="project-body">
+<span class="tag">HEALTHCARE · WEBSITE DESIGN</span>
+<h3>CarePoint Multispeciality Clinic</h3>
+<p>A modern clinic website concept with service information, sample team profiles and an appointment enquiry preview.</p>
+<p><strong>Technology:</strong> HTML, CSS &amp; JavaScript</p>
+<a class="project-link" href="https://care-point-clinic-demo.pages.dev/" target="_blank" rel="noopener noreferrer">View Live Website ↗</a>
+</div>
+</article>
 
-      <article class="project">
-        <div class="project-banner"
-             style="background:linear-gradient(135deg,#064e3b,#10b981)">
-          <h3>Your Business Website</h3>
-          <p>A custom online presence for your business</p>
-        </div>
-        <div class="project-body">
-          <span class="tag">NEXT PROJECT</span>
-          <h3>More Projects Coming Soon</h3>
-          <p>
-            I plan to create more website concepts for clinics,
-            boutiques, educational institutes and other businesses.
-          </p>
-          <a class="project-link" href="#contact">Discuss a Project ↗</a>
-        </div>
-      </article>
-    </div>
-  </div>
+<article class="project">
+<div class="future-banner">
+<div class="small-label">Next Up</div>
+<h3>Your Business.<br>Your Website.</h3>
+<p>Custom website concepts for growing businesses.</p>
+</div>
+<div class="project-body">
+<span class="tag">AVAILABLE FOR PROJECTS</span>
+<h3>Let's Build Something Great</h3>
+<p>Website concepts for clinics, boutiques, educational institutes and local businesses can be tailored to each brand.</p>
+<a class="project-link" href="#contact">Discuss a Project ↗</a>
+</div>
+</article>
+</div>
+</div>
 </section>
 
 <section id="services">
-  <div class="container">
-    <div class="section-label">What I Offer</div>
-    <h2>Website Design Services</h2>
-    <p class="intro">Practical website solutions tailored to business needs.</p>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Business Websites</h3>
-        <p>Professional websites to introduce your business and services.</p>
-      </div>
-      <div class="service">
-        <h3>Clinic Websites</h3>
-        <p>Clinic information, service pages, team profiles and enquiry layouts.</p>
-      </div>
-      <div class="service">
-        <h3>Mobile-Friendly Websites</h3>
-        <p>Responsive layouts for phones, tablets and desktop computers.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-label">What I Can Create</div>
+<h2>Website Design Services</h2>
+<p class="intro">Professional web experiences designed around your business and customers.</p>
+<div class="services-grid">
+<div class="service"><div class="service-icon">✦</div><h3>Business Websites</h3><p>A professional online home for your business, services and contact information.</p></div>
+<div class="service"><div class="service-icon">✚</div><h3>Clinic &amp; Healthcare</h3><p>Clear service pages, sample team layouts and appointment enquiry interfaces.</p></div>
+<div class="service"><div class="service-icon">◇</div><h3>Boutique &amp; Fashion</h3><p>Elegant brand-focused websites for boutiques, studios and fashion businesses.</p></div>
+<div class="service"><div class="service-icon">▦</div><h3>Educational Websites</h3><p>Course information, learning programmes and student enquiry page concepts.</p></div>
+<div class="service"><div class="service-icon">▣</div><h3>Landing Pages</h3><p>Focused pages designed to explain an offer and guide visitors to an action.</p></div>
+<div class="service"><div class="service-icon">↗</div><h3>Mobile-Friendly Design</h3><p>Responsive layouts for mobile phones, tablets and desktop screens.</p></div>
+</div>
+</div>
 </section>
 
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="section-label">Let's Connect</div>
-    <h2>Have a Website Idea?</h2>
-    <p>
-      Tell me about your business and the website you need.
-      Contact details can be added here when you are ready to receive enquiries.
-    </p>
-    <a class="btn" href="#projects">Explore My Work ↑</a>
-  </div>
+<div class="container">
+<div class="section-label">Let's Connect</div>
+<h2>Have a Website in Mind?</h2>
+<p>Tell me about your business, your goals and the kind of website you want to create. Let's discuss a design that fits your brand.</p>
+<a class="btn" href="mailto:">Discuss a Website Project ↗</a>
+</div>
 </section>
 </main>
 
 <footer>
-  <p>© 2026 Viji Web Design Portfolio. All rights reserved.</p>
-  <p>Portfolio demonstration projects. Fictional business details are used where indicated.</p>
+<p>© 2026 Viji Web Design Portfolio. All rights reserved.</p>
+<p>Website concepts shown are demonstrations; sample business details are illustrative.</p>
 </footer>
-
 </body>
 </html>
