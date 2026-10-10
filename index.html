@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viji | Website Design Portfolio</title>
-<meta name="description" content="Explore modern, responsive website designs for businesses by Viji.">
+<title>Viji Web | Website Design Portfolio</title>
+<meta name="description" content="Professional website design portfolio by Viji. Explore responsive websites for clinics, boutiques and businesses.">
+
 <style>
 :root {
   --navy: #10213d;
@@ -23,114 +24,222 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 header {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(255,255,255,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.97);
   border-bottom: 1px solid #e7edf5;
 }
 nav {
-  max-width: 1120px; margin: auto; padding: 17px 22px;
-  display: flex; justify-content: space-between;
-  align-items: center; gap: 20px;
+  max-width: 1120px;
+  margin: auto;
+  padding: 17px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
-.logo { font-size: 22px; font-weight: 800; color: var(--navy); }
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+}
 .logo span { color: var(--blue); }
-.navlinks { display: flex; gap: 24px; font-size: 14px; }
+.navlinks {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
 .navlinks a:hover { color: var(--blue); }
+
 .hero {
   background: linear-gradient(130deg, #10213d, #174ea6);
-  color: white; padding: 100px 22px 95px;
+  color: white;
+  padding: 100px 22px 95px;
 }
 .hero-inner { max-width: 1050px; margin: auto; }
-.eyebrow {
-  text-transform: uppercase; letter-spacing: 3px;
-  font-size: 12px; font-weight: bold; color: #93c5fd;
+.eyebrow, .section-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #93c5fd;
 }
 h1 {
   font-size: clamp(38px, 6vw, 66px);
-  line-height: 1.12; max-width: 800px; margin: 22px 0;
+  line-height: 1.12;
+  max-width: 800px;
+  margin: 22px 0;
 }
-.hero p { max-width: 650px; color: #e1eafa; font-size: 17px; }
-.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.hero p {
+  max-width: 650px;
+  color: #e1eafa;
+  font-size: 17px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
 .btn {
-  display: inline-block; padding: 13px 21px; border-radius: 8px;
-  font-weight: bold; font-size: 14px;
+  display: inline-block;
+  padding: 13px 21px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .2s;
 }
-.primary { background: #fff; color: var(--navy); }
+.btn:hover { transform: translateY(-2px); }
+.primary { background: white; color: var(--navy); }
 .secondary { border: 1px solid #a9c7fa; color: white; }
+
 section { padding: 78px 22px; }
 .container { max-width: 1050px; margin: auto; }
-.section-label {
-  color: var(--blue); font-size: 12px; letter-spacing: 2px;
-  font-weight: 800; text-transform: uppercase;
+.section-label { color: var(--blue); letter-spacing: 2px; }
+h2 {
+  color: var(--navy);
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 12px 0 16px;
 }
-h2 { color: var(--navy); font-size: clamp(29px, 4vw, 42px); line-height: 1.2; margin: 12px 0 16px; }
 .intro { color: var(--muted); max-width: 680px; }
+
 .about-grid {
-  display: grid; grid-template-columns: 1.1fr .9fr;
-  gap: 40px; align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: center;
 }
 .about-panel {
-  background: var(--light); padding: 30px; border-radius: 16px;
+  background: var(--light);
+  padding: 30px;
+  border-radius: 16px;
   border: 1px solid #e5ebf5;
 }
 .about-panel h3 { color: var(--navy); margin-bottom: 12px; }
-.skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.skills span {
-  background: white; border: 1px solid #dbe5f2;
-  padding: 7px 12px; border-radius: 20px; font-size: 13px;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
+.skills span {
+  background: white;
+  border: 1px solid #dbe5f2;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
 .projects { background: var(--light); }
 .project-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 25px; margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 25px;
+  margin-top: 32px;
 }
 .project {
-  background: white; border: 1px solid #e3eaf4;
-  border-radius: 16px; overflow: hidden;
-  box-shadow: 0 10px 28px rgba(16,33,61,.05);
+  background: white;
+  border: 1px solid #e3eaf4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(16,33,61,.08);
+  transition: transform .25s, box-shadow .25s;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(16,33,61,.13);
+}
+.project-image {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .project-banner {
-  min-height: 190px; padding: 30px;
-  display: flex; flex-direction: column; justify-content: center;
-  color: white; background: linear-gradient(135deg,#10213d,#2877d4);
+  min-height: 190px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(135deg,#064e3b,#10b981);
 }
 .project-banner h3 { font-size: 28px; line-height: 1.2; }
-.project-banner p { color: #dbeafe; margin-top: 8px; font-size: 14px; }
+.project-banner p { color: #e0f2fe; margin-top: 8px; font-size: 14px; }
 .project-body { padding: 25px; }
 .tag {
-  display: inline-block; color: #1d4ed8; background: #eff6ff;
-  border-radius: 5px; padding: 4px 9px; font-size: 11px;
-  font-weight: bold; margin-bottom: 12px;
+  display: inline-block;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 5px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 .project-body h3 { color: var(--navy); font-size: 22px; }
 .project-body p { color: var(--muted); margin: 10px 0 18px; font-size: 14px; }
-.project-link { color: var(--blue); font-weight: bold; font-size: 14px; }
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.project-link {
+  display: inline-block;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 14px;
+}
 .project-link:hover { text-decoration: underline; }
+.view-button {
+  background: var(--blue);
+  color: white;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
 .services-grid {
-  display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 18px; margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+  margin-top: 30px;
 }
 .service {
-  padding: 24px; border: 1px solid #e5ebf5; border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e5ebf5;
+  border-radius: 12px;
 }
 .service h3 { color: var(--navy); font-size: 17px; margin-bottom: 8px; }
 .service p { color: var(--muted); font-size: 14px; }
+
 .contact {
-  background: var(--navy); color: white; text-align: center;
+  background: var(--navy);
+  color: white;
+  text-align: center;
 }
 .contact h2 { color: white; }
 .contact p { color: #d7e3f5; max-width: 600px; margin: 0 auto; }
 .contact .btn { background: white; color: var(--navy); margin-top: 25px; }
+
 footer {
-  padding: 23px; text-align: center; color: var(--muted);
-  font-size: 13px; border-top: 1px solid #e7edf5;
+  padding: 23px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid #e7edf5;
 }
+
 @media(max-width:700px) {
-  .navlinks { gap: 12px; font-size: 12px; }
+  .navlinks { gap: 12px; font-size: 12px; flex-wrap: wrap; }
   .logo { font-size: 18px; }
   .hero { padding: 75px 22px; }
   .about-grid, .project-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+  .project-image { height: 230px; }
   section { padding: 58px 20px; }
 }
 @media(max-width:420px) {
@@ -139,8 +248,8 @@ footer {
 }
 </style>
 </head>
-<body>
 
+<body>
 <header>
   <nav>
     <a class="logo" href="#home">VIJI<span>.</span>WEB</a>
@@ -183,11 +292,16 @@ footer {
     </div>
     <div class="about-panel">
       <h3>My Design Approach</h3>
-      <p>Every project begins with understanding the business, presenting its
-      services clearly and creating a website visitors can navigate easily.</p>
+      <p>
+        Every project begins with understanding the business, presenting its
+        services clearly and creating a website visitors can navigate easily.
+      </p>
       <div class="skills">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-        <span>Responsive Design</span><span>Business Websites</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Business Websites</span>
       </div>
     </div>
   </div>
@@ -201,29 +315,33 @@ footer {
 
     <div class="project-grid">
       <article class="project">
-        <div class="project-banner">
-          <h3>CarePoint</h3>
-          <p>Multispeciality Clinic Website Concept</p>
-        </div>
+        <img
+          class="project-image"
+          src="CarePoint%20Clinic%20Team%20in%20a%20Bright%20Lobby.png"
+          alt="CarePoint clinic team in a bright reception lobby"
+          loading="lazy"
+        >
         <div class="project-body">
           <span class="tag">HEALTHCARE WEBSITE</span>
           <h3>CarePoint Clinic</h3>
           <p>
-            A modern healthcare website concept featuring service sections,
-            sample doctor profiles, clinic information and an appointment
-            enquiry preview.
+            A modern multispeciality clinic website concept featuring
+            healthcare services, sample doctor profiles, clinic information
+            and an appointment enquiry preview.
           </p>
           <p><strong>Built with:</strong> HTML, CSS and JavaScript</p>
-          <a class="project-link"
-             href="https://care-point-clinic-demo.pages.dev/"
-             target="_blank" rel="noopener noreferrer">
-             View Live Website ↗
-          </a>
+          <div class="project-actions">
+            <a class="btn view-button"
+               href="https://care-point-clinic-demo.pages.dev/"
+               target="_blank" rel="noopener noreferrer">
+              View Live Website ↗
+            </a>
+          </div>
         </div>
       </article>
 
       <article class="project">
-        <div class="project-banner" style="background:linear-gradient(135deg,#064e3b,#10b981)">
+        <div class="project-banner">
           <h3>Your Business Website</h3>
           <p>A custom online presence for your business</p>
         </div>
@@ -280,6 +398,5 @@ footer {
   <p>© 2026 Viji Web Design Portfolio. All rights reserved.</p>
   <p>Portfolio demonstration projects. Fictional business details are used where indicated.</p>
 </footer>
-
 </body>
 </html>
