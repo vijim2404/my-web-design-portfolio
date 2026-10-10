@@ -4,252 +4,167 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viji Web | Website Design Portfolio</title>
-<meta name="description" content="Professional website design portfolio by Viji. Explore responsive websites for clinics, boutiques and businesses.">
-
+<meta name="description" content="Professional, modern and responsive websites for clinics, boutiques and businesses.">
 <style>
 :root {
-  --navy: #10213d;
-  --blue: #2563eb;
-  --light: #f4f7fc;
-  --text: #243247;
-  --muted: #66758b;
+  --navy:#10213d;
+  --blue:#2563eb;
+  --light:#f4f7fc;
+  --text:#243247;
+  --muted:#66758b;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  line-height: 1.7;
-  background: white;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.7;
 }
-a { text-decoration: none; color: inherit; }
+a { color:inherit; text-decoration:none; }
 header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255,255,255,.97);
-  border-bottom: 1px solid #e7edf5;
+  position:sticky; top:0; z-index:10;
+  background:#fff; border-bottom:1px solid #e5eaf2;
 }
 nav {
-  max-width: 1120px;
-  margin: auto;
-  padding: 17px 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  max-width:1150px; margin:auto; padding:16px 24px;
+  display:flex; justify-content:space-between; align-items:center;
+  gap:20px;
 }
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--navy);
-}
-.logo span { color: var(--blue); }
-.navlinks {
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-}
-.navlinks a:hover { color: var(--blue); }
+.logo { font-size:23px; font-weight:800; color:var(--navy); }
+.logo span { color:var(--blue); }
+.navlinks { display:flex; gap:24px; font-size:14px; }
+.navlinks a:hover { color:var(--blue); }
 
 .hero {
-  background: linear-gradient(130deg, #10213d, #174ea6);
-  color: white;
-  padding: 100px 22px 95px;
+  min-height:580px;
+  display:flex; align-items:center;
+  padding:80px 24px;
+  color:#fff;
+  background:linear-gradient(120deg,#10213d,#174ea6);
 }
-.hero-inner { max-width: 1050px; margin: auto; }
-.eyebrow, .section-label {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #93c5fd;
+.hero-inner { max-width:1100px; width:100%; margin:auto; }
+.eyebrow {
+  color:#bfdbfe; font-size:12px; font-weight:bold;
+  letter-spacing:3px; text-transform:uppercase;
 }
 h1 {
-  font-size: clamp(38px, 6vw, 66px);
-  line-height: 1.12;
-  max-width: 800px;
-  margin: 22px 0;
+  font-size:clamp(38px,6vw,68px);
+  line-height:1.12; max-width:850px; margin:22px 0;
 }
-.hero p {
-  max-width: 650px;
-  color: #e1eafa;
-  font-size: 17px;
-}
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 30px;
-}
+.hero p { max-width:660px; color:#e5edff; font-size:17px; }
+.actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
 .btn {
-  display: inline-block;
-  padding: 13px 21px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  transition: .2s;
+  display:inline-block; padding:13px 22px; border-radius:8px;
+  font-size:14px; font-weight:bold;
 }
-.btn:hover { transform: translateY(-2px); }
-.primary { background: white; color: var(--navy); }
-.secondary { border: 1px solid #a9c7fa; color: white; }
+.primary { background:#fff; color:var(--navy); }
+.secondary { border:1px solid #c2d7ff; color:#fff; }
 
-section { padding: 78px 22px; }
-.container { max-width: 1050px; margin: auto; }
-.section-label { color: var(--blue); letter-spacing: 2px; }
-h2 {
-  color: var(--navy);
-  font-size: clamp(29px, 4vw, 42px);
-  line-height: 1.2;
-  margin: 12px 0 16px;
+section { padding:78px 24px; }
+.container { max-width:1100px; margin:auto; }
+.section-label {
+  color:var(--blue); font-size:12px; letter-spacing:2px;
+  font-weight:800; text-transform:uppercase;
 }
-.intro { color: var(--muted); max-width: 680px; }
+h2 {
+  color:var(--navy); font-size:clamp(30px,4vw,43px);
+  line-height:1.2; margin:12px 0 16px;
+}
+.intro { color:var(--muted); max-width:700px; }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 40px;
-  align-items: center;
+  display:grid; grid-template-columns:1.1fr .9fr;
+  gap:38px; align-items:center;
 }
 .about-panel {
-  background: var(--light);
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid #e5ebf5;
+  padding:30px; border-radius:16px;
+  background:var(--light); border:1px solid #e3eaf4;
 }
-.about-panel h3 { color: var(--navy); margin-bottom: 12px; }
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
+.about-panel h3 { color:var(--navy); margin-bottom:12px; }
+.skills { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
 .skills span {
-  background: white;
-  border: 1px solid #dbe5f2;
-  padding: 7px 12px;
-  border-radius: 20px;
-  font-size: 13px;
+  background:#fff; border:1px solid #dbe5f2;
+  padding:6px 11px; border-radius:20px; font-size:13px;
 }
 
-.projects { background: var(--light); }
+.projects { background:var(--light); }
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 25px;
-  margin-top: 32px;
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px; margin-top:34px;
 }
 .project {
-  background: white;
-  border: 1px solid #e3eaf4;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(16,33,61,.08);
-  transition: transform .25s, box-shadow .25s;
-}
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(16,33,61,.13);
-}
-.project-image {
-  width: 100%;
-  height: 260px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
+  background:#fff; border:1px solid #e0e8f2;
+  border-radius:18px; overflow:hidden;
+  box-shadow:0 12px 35px rgba(16,33,61,.09);
 }
 .project-banner {
-  min-height: 190px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(135deg,#064e3b,#10b981);
+  min-height:300px; padding:28px;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  color:#fff;
+  background:linear-gradient(135deg,#10213d,#2877d4);
+  position:relative;
 }
-.project-banner h3 { font-size: 28px; line-height: 1.2; }
-.project-banner p { color: #e0f2fe; margin-top: 8px; font-size: 14px; }
-.project-body { padding: 25px; }
+.carepoint-banner {
+  background-image:
+    linear-gradient(to top,rgba(7,22,43,.88),rgba(7,22,43,.05)),
+    url("./CarePoint%20Clinic%20Team%20in%20a%20Bright%20Lobby.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.project-banner h3 {
+  font-size:30px; line-height:1.2;
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+.project-banner p { color:#eaf2ff; margin-top:8px; font-size:14px; }
+.project-body { padding:26px; }
 .tag {
-  display: inline-block;
-  color: #1d4ed8;
-  background: #eff6ff;
-  border-radius: 5px;
-  padding: 4px 9px;
-  font-size: 11px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  display:inline-block; color:#1d4ed8; background:#eff6ff;
+  border-radius:5px; padding:4px 9px; font-size:11px;
+  font-weight:bold; margin-bottom:12px;
 }
-.project-body h3 { color: var(--navy); font-size: 22px; }
-.project-body p { color: var(--muted); margin: 10px 0 18px; font-size: 14px; }
-.project-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-.project-link {
-  display: inline-block;
-  color: var(--blue);
-  font-weight: bold;
-  font-size: 14px;
-}
-.project-link:hover { text-decoration: underline; }
-.view-button {
-  background: var(--blue);
-  color: white;
-  border-radius: 7px;
-  padding: 10px 15px;
-}
+.project-body h3 { color:var(--navy); font-size:22px; }
+.project-body p { color:var(--muted); margin:11px 0 18px; font-size:14px; }
+.project-link { color:var(--blue); font-weight:bold; font-size:14px; }
+.project-link:hover { text-decoration:underline; }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 18px;
-  margin-top: 30px;
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px; margin-top:30px;
 }
 .service {
-  padding: 24px;
-  border: 1px solid #e5ebf5;
-  border-radius: 12px;
+  padding:25px; border:1px solid #e5ebf5; border-radius:13px;
+  background:#fff;
 }
-.service h3 { color: var(--navy); font-size: 17px; margin-bottom: 8px; }
-.service p { color: var(--muted); font-size: 14px; }
+.service h3 { color:var(--navy); font-size:17px; margin-bottom:8px; }
+.service p { color:var(--muted); font-size:14px; }
 
-.contact {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-}
-.contact h2 { color: white; }
-.contact p { color: #d7e3f5; max-width: 600px; margin: 0 auto; }
-.contact .btn { background: white; color: var(--navy); margin-top: 25px; }
+.contact { background:var(--navy); color:#fff; text-align:center; }
+.contact h2 { color:#fff; }
+.contact p { color:#d7e3f5; max-width:650px; margin:auto; }
+.contact .btn { background:#fff; color:var(--navy); margin-top:25px; }
 
 footer {
-  padding: 23px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-  border-top: 1px solid #e7edf5;
+  padding:24px; text-align:center; color:var(--muted);
+  font-size:13px; border-top:1px solid #e7edf5;
 }
 
 @media(max-width:700px) {
-  .navlinks { gap: 12px; font-size: 12px; flex-wrap: wrap; }
-  .logo { font-size: 18px; }
-  .hero { padding: 75px 22px; }
-  .about-grid, .project-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr; }
-  .project-image { height: 230px; }
-  section { padding: 58px 20px; }
+  .navlinks { gap:12px; font-size:12px; flex-wrap:wrap; }
+  .logo { font-size:19px; }
+  .hero { min-height:500px; padding:70px 22px; }
+  .about-grid,.project-grid { grid-template-columns:1fr; }
+  .services-grid { grid-template-columns:1fr; }
+  .project-banner { min-height:260px; }
+  section { padding:58px 20px; }
 }
 @media(max-width:420px) {
-  nav { align-items: flex-start; flex-direction: column; }
-  .navlinks { flex-wrap: wrap; }
+  nav { align-items:flex-start; flex-direction:column; }
 }
 </style>
 </head>
-
 <body>
+
 <header>
   <nav>
     <a class="logo" href="#home">VIJI<span>.</span>WEB</a>
@@ -267,10 +182,11 @@ footer {
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="eyebrow">Website Design Portfolio</div>
-    <h1>Building Digital Experiences for Modern Businesses.</h1>
+    <h1>Beautiful Websites That Help Businesses Grow.</h1>
     <p>
-      I create clean, professional and responsive websites that help
-      businesses present their services and build a strong online presence.
+      I create modern, professional and mobile-friendly websites
+      that help businesses build trust, showcase their services
+      and establish a strong online presence.
     </p>
     <div class="actions">
       <a class="btn primary" href="#projects">Explore My Projects ↗</a>
@@ -283,18 +199,18 @@ footer {
   <div class="container about-grid">
     <div>
       <div class="section-label">About Me</div>
-      <h2>Thoughtful Design.<br>Useful Websites.</h2>
+      <h2>Thoughtful Design.<br>Powerful First Impressions.</h2>
       <p class="intro">
-        I design websites with a focus on clear layouts, attractive visuals,
-        easy navigation and mobile-friendly experiences. My portfolio
-        showcases demonstration projects created for different business needs.
+        I design clear, attractive and responsive websites for businesses.
+        My portfolio includes demonstration projects created to show how
+        a professional website can present a brand and its services.
       </p>
     </div>
     <div class="about-panel">
       <h3>My Design Approach</h3>
       <p>
-        Every project begins with understanding the business, presenting its
-        services clearly and creating a website visitors can navigate easily.
+        Every website should look professional, work smoothly on mobile
+        devices and make it easy for visitors to understand the business.
       </p>
       <div class="skills">
         <span>HTML</span>
@@ -310,38 +226,37 @@ footer {
 <section class="projects" id="projects">
   <div class="container">
     <div class="section-label">Selected Work</div>
-    <h2>My Projects</h2>
-    <p class="intro">Explore my website design concepts and live demonstrations.</p>
+    <h2>Featured Website Projects</h2>
+    <p class="intro">
+      Explore my website concepts designed for different business needs.
+    </p>
 
     <div class="project-grid">
       <article class="project">
-        <img
-          class="project-image"
-          src="CarePoint%20Clinic%20Team%20in%20a%20Bright%20Lobby.png"
-          alt="CarePoint clinic team in a bright reception lobby"
-          loading="lazy"
-        >
+        <div class="project-banner carepoint-banner">
+          <h3>CarePoint Clinic</h3>
+          <p>Modern Multispeciality Healthcare Website</p>
+        </div>
         <div class="project-body">
           <span class="tag">HEALTHCARE WEBSITE</span>
-          <h3>CarePoint Clinic</h3>
+          <h3>CarePoint Multispeciality Clinic</h3>
           <p>
-            A modern multispeciality clinic website concept featuring
-            healthcare services, sample doctor profiles, clinic information
-            and an appointment enquiry preview.
+            A healthcare website concept featuring clinic services,
+            sample doctor profiles, clinic information and an
+            appointment enquiry interface.
           </p>
           <p><strong>Built with:</strong> HTML, CSS and JavaScript</p>
-          <div class="project-actions">
-            <a class="btn view-button"
-               href="https://care-point-clinic-demo.pages.dev/"
-               target="_blank" rel="noopener noreferrer">
-              View Live Website ↗
-            </a>
-          </div>
+          <a class="project-link"
+             href="https://care-point-clinic-demo.pages.dev/"
+             target="_blank" rel="noopener noreferrer">
+             View Live Website ↗
+          </a>
         </div>
       </article>
 
       <article class="project">
-        <div class="project-banner">
+        <div class="project-banner"
+             style="background:linear-gradient(135deg,#064e3b,#10b981)">
           <h3>Your Business Website</h3>
           <p>A custom online presence for your business</p>
         </div>
@@ -349,8 +264,8 @@ footer {
           <span class="tag">NEXT PROJECT</span>
           <h3>More Projects Coming Soon</h3>
           <p>
-            This portfolio will grow as I create more website concepts
-            for clinics, boutiques, educational institutes and other businesses.
+            I plan to create more website concepts for clinics,
+            boutiques, educational institutes and other businesses.
           </p>
           <a class="project-link" href="#contact">Discuss a Project ↗</a>
         </div>
@@ -363,19 +278,19 @@ footer {
   <div class="container">
     <div class="section-label">What I Offer</div>
     <h2>Website Design Services</h2>
-    <p class="intro">Website solutions tailored to a business's needs.</p>
+    <p class="intro">Practical website solutions tailored to business needs.</p>
     <div class="services-grid">
       <div class="service">
         <h3>Business Websites</h3>
         <p>Professional websites to introduce your business and services.</p>
       </div>
       <div class="service">
-        <h3>Clinic & Healthcare Websites</h3>
-        <p>Service pages, team profiles and appointment enquiry interfaces.</p>
+        <h3>Clinic Websites</h3>
+        <p>Clinic information, service pages, team profiles and enquiry layouts.</p>
       </div>
       <div class="service">
-        <h3>Mobile-Friendly Design</h3>
-        <p>Responsive layouts designed for phones, tablets and computers.</p>
+        <h3>Mobile-Friendly Websites</h3>
+        <p>Responsive layouts for phones, tablets and desktop computers.</p>
       </div>
     </div>
   </div>
@@ -398,5 +313,6 @@ footer {
   <p>© 2026 Viji Web Design Portfolio. All rights reserved.</p>
   <p>Portfolio demonstration projects. Fictional business details are used where indicated.</p>
 </footer>
+
 </body>
 </html>
